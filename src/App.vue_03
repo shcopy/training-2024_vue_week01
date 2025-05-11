@@ -1,0 +1,52 @@
+<script setup>
+import { ref} from 'vue';
+const text = ref('一句話')  // 定義 Vue 的資料使用的
+const num = ref(0)
+
+/* setInterval(() => {
+  num.value= num.value+1
+  // console.log(num.value);
+}, 500); */
+
+const todos = ref([
+  {
+    id: 1,
+    name: '購買雜貨',
+    dueDate: '2024-07-30',
+    complete: true
+  },{
+    id: 2,
+    name: '完成報告',
+    dueDate: '2024-08-01',
+    complete: false
+  },{
+    id: 3,
+    name: '清理房間',
+    dueDate: '2024-07-28',
+    complete: true
+  },{
+    id: 4,
+    name: '計劃假期',
+    dueDate: '2024-08-05',
+    complete: false
+  },{
+    id: 5,
+    name: '處理稅務',
+    dueDate: '2024-08-10',
+    complete: false
+  }
+])
+
+console.log(todos.value);
+console.log(todos.value[0].name);
+
+</script>
+
+<template>
+  <h1>Vue 的資料建構</h1>
+  <h2>{{ text }}</h2>
+  {{ num }} - <input type="number" v-model="num">
+</template>
+
+<style>
+</style>
